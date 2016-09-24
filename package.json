@@ -1,0 +1,19 @@
+{
+  "name": "ng2-webpack",
+  "version": "1.0.0",
+  "description": "Angular2 & Webpack template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caraclarke/ng2-webpack.git"
+  },
+  "author": "Cara Clarke & angular.io docs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caraclarke/ng2-webpack/issues"
+  },
+  "homepage": "https://github.com/caraclarke/ng2-webpack#readme"
+}
