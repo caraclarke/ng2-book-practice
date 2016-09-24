@@ -24,11 +24,13 @@ module.exports = {
   /*
   * resolve module file request by looking for matching files with
   * '': explicit extension
-  * '.js': js extension
-  *  '.ts': ts extension
   */
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js', '.ts', '.json'],
+    // Make sure root is src
+    root: helpers.root('src'),
+    // remove other default values
+    modulesDirectories: ['node_modules'],
   },
 
   /*
@@ -46,6 +48,10 @@ module.exports = {
       {
         test: /\.ts$/,
         loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
         test: /\.html$/,
