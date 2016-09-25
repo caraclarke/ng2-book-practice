@@ -26,11 +26,7 @@ module.exports = {
   * '': explicit extension
   */
   resolve: {
-    extensions: ['', '.js', '.ts', '.json'],
-    // Make sure root is src
-    root: helpers.root('src'),
-    // remove other default values
-    modulesDirectories: ['node_modules'],
+    extensions: ['', '.js', '.ts']
   },
 
   /*
@@ -48,10 +44,6 @@ module.exports = {
       {
         test: /\.ts$/,
         loaders: ['awesome-typescript-loader', 'angular2-template-loader']
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
       },
       {
         test: /\.html$/,
@@ -84,12 +76,12 @@ module.exports = {
   * inject webpack generated js and css files into index.html
   */
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['app', 'vendor', 'polyfills']
-    }),
+   new webpack.optimize.CommonsChunkPlugin({
+     name: ['app', 'vendor', 'polyfills']
+   }),
 
-    new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    })
-  ]
+   new HtmlWebpackPlugin({
+     template: 'src/index.html'
+   })
+ ]
 };
