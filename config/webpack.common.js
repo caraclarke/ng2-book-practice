@@ -2,10 +2,10 @@
 * https://angular.io/docs/ts/latest/guide/webpack.html
 */
 
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var helpers = require('./helpers');
+var webpack = require("webpack");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var helpers = require("./helpers");
 
 module.exports = {
 
@@ -16,17 +16,17 @@ module.exports = {
   * app: our app code
   */
   entry: {
-    'polyfills': './src/polyfills.ts',
-    'vendor': './src/vendor.ts',
-    'app': './src/main.ts'
+    "polyfills": "./src/polyfills.ts",
+    "vendor": "./src/vendor.ts",
+    "app": "./src/main.ts"
   },
 
   /*
   * resolve module file request by looking for matching files with
-  * '': explicit extension
+  * ": explicit extension
   */
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ["", ".js", ".ts"]
   },
 
   /*
@@ -37,31 +37,31 @@ module.exports = {
   * html: for component templates
   * images/fonts: Images and fonts are bundled as well.
   * css: The pattern matches application-wide styles;
-  * the second handles component-scoped styles, specified in a component's styleUrls metadata property
+  * the second handles component-scoped styles, specified in a component"s styleUrls metadata property
   */
   module: {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+        loaders: ["awesome-typescript-loader", "angular2-template-loader"]
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        loader: "html"
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        loader: "file?name=assets/[name].[hash].[ext]"
       },
       {
         test: /\.css$/,
-        exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        exclude: helpers.root("src", "app"),
+        loader: ExtractTextPlugin.extract("style", "css?sourceMap")
       },
       {
         test: /\.css$/,
-        include: helpers.root('src', 'app'),
-        loader: 'raw'
+        include: helpers.root("src", "app"),
+        loader: "raw"
       }
     ]
   },
@@ -77,11 +77,11 @@ module.exports = {
   */
   plugins: [
    new webpack.optimize.CommonsChunkPlugin({
-     name: ['app', 'vendor', 'polyfills']
+     name: ["app", "vendor", "polyfills"]
    }),
 
    new HtmlWebpackPlugin({
-     template: 'src/index.html'
+     template: "src/index.html"
    })
  ]
 };
