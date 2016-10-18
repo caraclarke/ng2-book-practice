@@ -37,10 +37,36 @@ export class ListComponent implements OnInit {
   * call getSecrets method in SecretService
   */
   public getSecrets() {
-    this.secretService.getSecrets().then((secrets) => {
-      this.secrets = secrets;
-      this.constantArray = secrets;
-    });
+    // this.secretService.getSecrets().then((secrets) => {
+    //
+    //   this.constantArray = secrets;
+    // });
+    this.secrets = [
+      {
+        "id":1,
+        "name":"Tin",
+        "type":"website",
+        "visible_data": {
+          "username": "fakeun"
+        },
+        "secrets": {
+          "password": "fake_password"
+        }
+      },
+      {
+        "id":2,
+        "name":"Two",
+        "type":"app",
+        "visible_data": {
+          "username": "fakeun2"
+        },
+        "secrets": {
+          "password": "other_fake_password"
+        }
+      }
+    ];
+
+    this.constantArray = this.secrets;
   }
 
 }
