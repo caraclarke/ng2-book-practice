@@ -9,7 +9,7 @@ import { Product } from "../../models/product";
 @Component({
   selector: "product-list",
   inputs: ["productList"],
-  outputs: ["onProductSelected"],
+  outputs: ["onProductsSelected"],
   templateUrl: "./product-list.component.html"
 })
 
@@ -20,9 +20,9 @@ export class ProductList {
   public productList: Product[];
 
   /*
-  * @output onProductSelected - outputs current product whenever new product is selected
+  * @output onProductsSelected - outputs current product whenever new product is selected
   */
-  public onProductSelected: EventEmitter<Product>;
+  public onProductsSelected: EventEmitter<Product>;
 
   /*
   * @property currentProduct - local state containing the currently selected product
@@ -30,7 +30,7 @@ export class ProductList {
   public currentProduct: Product;
 
   constructor() {
-    this.onProductSelected = new EventEmitter();
+    this.onProductsSelected = new EventEmitter();
   }
 
   /*
@@ -39,7 +39,7 @@ export class ProductList {
   */
   public clicked(product: Product): void {
     this.currentProduct = product;
-    this.onProductSelected.emit(product);
+    this.onProductsSelected.emit(product);
   }
 
   /*
