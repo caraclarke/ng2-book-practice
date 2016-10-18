@@ -2,7 +2,7 @@ import { Component, EventEmitter } from "@angular/core";
 import { Product } from "../../models/product";
 
 @Component({
-  selector: "price-display",
+  selector: "product-price",
   templateUrl: "./product-price.component.html"
 })
 
