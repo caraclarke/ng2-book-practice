@@ -6,6 +6,7 @@ import { Secret } from "../secret/secret";
   selector: "secret-row",
   inputs: ["secret"],
   host: { "class": "item" },
+  styleUrls: ["./secret-row.component.scss"],
   templateUrl: "./secret-row.component.html"
 })
 
