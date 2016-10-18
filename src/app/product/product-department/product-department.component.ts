@@ -3,7 +3,10 @@ import { Product } from "../../models/product";
 
 @Component({
   selector: "product-department",
+  inputs: ["product"],
   templateUrl: "./product-department.component.html"
 })
 
-export class ProductDepartmentComponent {}
+export class ProductDepartmentComponent {
+  product: Product;
+}

@@ -7,6 +7,9 @@ import { HomeComponent } from "./home/home.component"
 import { InventoryComponent } from "./inventory";
 import { ProductList } from "./product";
 import { ProductRowComponent } from "./product";
+import { ProductDepartmentComponent } from "./product";
+import { ProductImageComponent } from "./product";
+import { ProductPriceComponent } from "./product";
 
 @NgModule({
   imports: [
@@ -18,7 +21,10 @@ import { ProductRowComponent } from "./product";
     HomeComponent,
     InventoryComponent,
     ProductList,
-    ProductRowComponent
+    ProductRowComponent,
+    ProductDepartmentComponent,
+    ProductImageComponent,
+    ProductPriceComponent
   ],
   providers: [
     appRoutingProviders
