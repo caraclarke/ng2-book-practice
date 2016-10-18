@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./home/home.component";
 import { InventoryComponent } from "./inventory";
+import { ListComponent } from "./list";
 
 const appRoutes: Routes = [
   {
@@ -14,8 +15,12 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
-    path: "list",
+    path: "products",
     component: InventoryComponent
+  },
+  {
+    path: "list",
+    component: ListComponent
   }
 ];
 

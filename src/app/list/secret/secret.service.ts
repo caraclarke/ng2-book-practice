@@ -93,14 +93,14 @@ export class SecretService {
   public deleteSecret(secretId: number) {
     console.log(secretId);
 
-    return this.sdk.delete_secret(secretId)
-      .then((resp) => {
-        console.log(resp);
-        return resp;
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    // return this.sdk.delete_secret(secretId)
+    //   .then((resp) => {
+    //     console.log(resp);
+    //     return resp;
+    //   })
+    //   .catch((err) => {
+    //     console.error(err);
+    //   });
   }
 
   /*

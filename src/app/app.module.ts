@@ -1,10 +1,21 @@
+/*
+* @angular
+*/
+import { BrowserModule  } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 import { NgModule } from "@angular/core";
-import { BrowserModule }  from "@angular/platform-browser";
 import { routing, appRoutingProviders } from "./app.routing";
+
+/*
+* Third Party Other
+*/
+import { ClipboardModule } from "angular2-clipboard";
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component"
 import { InventoryComponent } from "./inventory";
+import { ListComponent } from "./list";
 import { ProductList } from "./product";
 import { ProductRowComponent } from "./product";
 import { ProductDepartmentComponent } from "./product";
@@ -18,12 +29,16 @@ import { SecretService } from "./list";
 @NgModule({
   imports: [
     BrowserModule,
-    routing
+  ClipboardModule,
+  FormsModule,
+  HttpModule,
+  routing
   ],
   declarations: [
     AppComponent,
     HomeComponent,
     InventoryComponent,
+    ListComponent,
     ProductList,
     ProductRowComponent,
     ProductDepartmentComponent,
@@ -32,6 +47,7 @@ import { SecretService } from "./list";
   ],
   providers: [
     appRoutingProviders,
+    Api,
     NgPassitSDK,
     SecretService
   ],
