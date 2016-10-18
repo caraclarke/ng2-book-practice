@@ -5,6 +5,7 @@ import { routing, appRoutingProviders } from "./app.routing";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component"
 import { ProductList } from "./product";
+import { InventoryComponent } from "./product";
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { ProductList } from "./product";
   declarations: [
     AppComponent,
     HomeComponent,
+    InventoryComponent,
     ProductList
   ],
   providers: [
