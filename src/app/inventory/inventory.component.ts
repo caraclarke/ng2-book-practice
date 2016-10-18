@@ -37,4 +37,8 @@ export class InventoryComponent {
     ];
   }
 
+  productWasSelected(product: Product): void {
+    console.log("product clicked: ", product);
+  }
+
 }
