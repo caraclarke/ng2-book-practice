@@ -11,6 +11,10 @@ import { ProductDepartmentComponent } from "./product";
 import { ProductImageComponent } from "./product";
 import { ProductPriceComponent } from "./product";
 
+import Api from "./ngsdk/api";
+import NgPassitSDK from "./ngsdk/sdk.ts";
+import { SecretService } from "./list";
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import { ProductPriceComponent } from "./product";
     ProductPriceComponent
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    NgPassitSDK,
+    SecretService
   ],
   bootstrap: [ AppComponent ]
 })
