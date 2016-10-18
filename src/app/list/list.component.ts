@@ -18,15 +18,13 @@ import { SecretService } from "./secret/secret.service";
 
 export class ListComponent implements OnInit {
 
-  public resultArray: Secret[];
   public constantArray: Secret[];
   private secrets: Secret[];
-  private selectedSecret: Secret;
   private secret: Secret;
+  private selectedSecret: Secret;
 
   constructor(private secretService: SecretService) {
     this.secret = new Secret();
-    this.resultArray = [];
   }
 
   public ngOnInit() {
@@ -67,6 +65,10 @@ export class ListComponent implements OnInit {
     ];
 
     this.constantArray = this.secrets;
+  }
+
+  public secretWasSelected(secret: Secret) {
+    console.log("secret clicked: ", secret);
   }
 
 }

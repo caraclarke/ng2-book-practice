@@ -22,6 +22,9 @@ import { ProductDepartmentComponent } from "./product";
 import { ProductImageComponent } from "./product";
 import { ProductPriceComponent } from "./product";
 
+import { SecretListComponent } from "./list";
+import { SecretRowComponent } from "./list";
+
 import Api from "./ngsdk/api";
 import NgPassitSDK from "./ngsdk/sdk.ts";
 import { SecretService } from "./list";
@@ -43,7 +46,9 @@ import { SecretService } from "./list";
     ProductRowComponent,
     ProductDepartmentComponent,
     ProductImageComponent,
-    ProductPriceComponent
+    ProductPriceComponent,
+    SecretListComponent,
+    SecretRowComponent
   ],
   providers: [
     appRoutingProviders,
