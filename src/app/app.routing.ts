@@ -2,7 +2,7 @@ import { ModuleWithProviders } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./home/home.component";
-import { ProductList } from "./product";
+import { InventoryComponent } from "./inventory";
 
 const appRoutes: Routes = [
   {
@@ -15,7 +15,7 @@ const appRoutes: Routes = [
   },
   {
     path: "list",
-    component: ProductList
+    component: InventoryComponent
   }
 ];
 
