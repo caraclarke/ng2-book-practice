@@ -38,3 +38,5 @@ src/app/**/*.js.map
 
 src/**/*.js
 src/**/*.js.map
+
+notes.md
